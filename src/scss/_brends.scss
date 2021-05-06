@@ -1,0 +1,194 @@
+
+.wrapper__brend {
+    width: 240px;
+    height: 72px;
+    border: 1px solid $border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    
+    .brend__logo {
+        margin-left: 16px;
+    }
+
+    .brend__button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid $pink;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+        background-color: $white;
+    }
+}
+
+.swiper-wrapper {
+    padding-left: 16px;
+    margin-bottom: 40px;
+}
+
+.swiper-pagination {
+    width: 12px;
+    height: 12px; 
+    margin: 0 auto;   
+}
+
+.swiper-pagination-bullet {
+    background-color: #B5B6BC;
+}
+
+.continue__logo-2 {
+    opacity: 0;
+}
+
+.wrapper__repair {
+    width: 240px;
+    height: 160px;
+    border: 1px solid $border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $white;
+    padding: 16px;
+    box-sizing: border-box; 
+}
+
+.repair__text {
+    align-self: flex-start;
+    margin: 0;
+}
+
+.repair__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    align-self: flex-end;
+}
+
+.continue__logo-3 {
+    opacity: 0;
+}
+
+@media (min-width: 768px) {
+    .brends__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px 24px;
+        padding-left: 24px;
+    }
+
+    .wrapper__brend {
+        width: 224px;
+    }
+
+    .visibility-768, .visibility-1440 {
+        display: none;
+    }
+
+    .continue__logo-2 {
+        opacity: 1;
+        margin-left: 24px;
+        margin-right: 16px;
+    }
+    
+    .continue ~ .continue__text-2:before {
+        content: 'Показать все';
+    }
+         
+    .continue:checked ~ .continue__text-2:before {
+        content: 'Скрыть';
+    }
+    
+    .continue:checked ~ .continue__logo-2 {
+        transform: rotate(180deg);
+    }
+    
+    .continue:checked ~ .swiper-container .visibility-768 {
+        display: flex;
+    }
+
+    .continue:checked ~ .swiper-container .visibility-1440 {
+        display: flex;
+    }
+
+    .repairs__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px 24px;
+        padding-left: 24px;
+    }
+
+    .wrapper__repair {
+        width: 224px;
+    }
+
+    .vis-768, .vis-1440 {
+        display: none;
+    }
+
+    .continue__logo-3 {
+        opacity: 1;
+        margin-left: 24px;
+        margin-right: 16px;
+    }
+
+    .continue ~ .continue__text-3:before {
+        content: 'Показать все';
+    }
+         
+    .continue:checked ~ .continue__text-3:before {
+        content: 'Скрыть';
+    }
+    
+    .continue:checked ~ .continue__logo-3 {
+        transform: rotate(180deg);
+    }
+    
+    .continue:checked ~ .swiper-container .vis-768 {
+        display: flex;
+    }
+
+    .continue:checked ~ .swiper-container .vis-1440 {
+        display: flex;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrapper__brend {
+        width: 240px;
+    }
+
+    .visibility-768 {
+        display: flex;
+    }
+
+    .vis-768 {
+        display: flex;
+    }
+
+    .wrapper__repair {
+        width: 240px;
+    }
+
+    .brends__wrapper {
+        gap: 16px 32px;
+        padding-left: 32px;
+    }
+
+    .repairs__wrapper {
+        gap: 16px 32px;
+        padding-left: 32px;
+    }
+
+    .continue__logo-2, .continue__logo-3 {
+        margin-left: 32px;
+    }
+}

@@ -1,0 +1,204 @@
+
+.container__header {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.header__left-side {
+    display: flex;
+}
+
+.logo {
+    width: 96px;
+    height: 51px;
+    margin-top: 18px;
+    margin-left: 16px;
+}
+
+.header__right-side {
+    display: flex;
+}
+
+.header__call-menu {
+    display: flex;
+}
+
+.call-menu__button {
+    display: none;
+}
+
+.header__line {
+    width: 2px;
+    height: 32px;
+    background-color: $border;
+    margin-top: 28px;
+    margin-left: 20px;
+}
+
+.header__button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: $pink;
+    margin-left: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.header__button:last-child {
+    margin-right: 24px;
+}
+
+.header__desktop-button {
+    display: none;
+}
+
+.header__list {
+    display: none;
+}
+
+.header__footer {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .call-menu__button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: none;
+        background-color: $pink;
+        margin-left: 16px;
+        margin-top: 24px;
+    }
+
+    .header__ipad__line {
+        width: 2px;
+        height: 32px;
+        background-color: $border;
+        margin-top: 28px;
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container__header {
+        width: 21%;
+        height: auto;
+    }
+
+    .logo {
+        margin-left: 22px;
+        margin-top: 30px;
+    }
+
+    .header__desktop-button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: none;
+        background-color: $pink;
+        margin-right: 16px;
+        margin-top: 35px;
+    }
+
+    .header__button, .header__line, .header__ipad__line {
+        display: none;
+    }
+
+    .header__button--menu {
+        display: block;
+        margin-top: 35px;
+        margin-left: 20px;
+    }
+
+    .header__call-menu {
+        position: absolute;
+        left: 0;
+        top: 700px;
+    }
+
+    .header__list {
+        position: absolute;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .list__text {
+        text-decoration: none;
+        cursor: pointer;
+        margin-top: 32px;
+        padding-left: 20px;
+        font-size: 16px;
+        line-height: 20px;
+        color: $black;
+    }
+
+    .list__text:first-child {
+        margin-top: 50px;
+    }
+
+    .list__text:hover {
+        color: $text;
+        padding-left: 0;
+    }
+
+    .list__text:hover::before {
+        content: "";
+        padding: 4px 0 4px 4px;
+        background: $blue;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        margin-right: 20px;
+    }
+
+    .header__footer {
+        display: block;
+        position: absolute;
+        top: 785px;
+    }
+
+    .footer__email {
+        margin-left: 24px;
+    }
+    
+    .footer__phone-number {
+        margin: 12px 100px 40px 24px;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: bold;
+    }
+    
+    .footer__language {
+        display: flex;
+    }
+    
+    .language__button {
+        display: flex;
+        width: 25px;
+        height: 24px;
+        border: none;
+        background-color: $white;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .language__button:first-child {
+        margin-left: 20px;
+    }
+    
+    .language__button:focus {
+        color: $text;
+    }
+}

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'TTLakes';
+    src: url("../fonts/TTLakes-Regular.eot");
+    src: local(":relaxed:"), url("../fonts/TTLakes-Regular.woff") format("woff"), url("../fonts/TTLakes-Regular.ttf") format("truetype"), url("../fonts/TTLakes-Regular.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'TTLakes';
+}
+
+@import './colors';
+@import './header';
+@import './content';
+@import './brends';
+@import './prices';
+@import './footer';
+@import './burger-menu';
